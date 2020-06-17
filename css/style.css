@@ -1,0 +1,212 @@
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --clr-main: #f1c11a;
+  --clr-primary: #7D7676;
+  --clr-secondary: #000;
+  --font-primary: 'Roboto', sans-serif;
+
+}
+
+body {
+  font-family: var(--font-primary);
+}
+
+/* Global */
+.container {
+  width: 70%;
+  margin: auto;
+}
+.btn {
+  color: var(--clr-secondary);
+  padding: 1em 1.3em;
+  border: 2px solid #fff;
+  font-weight: 700;
+  border-radius: 3px;
+  text-decoration: none;
+}
+
+/* Global --> */
+
+/* bg-img */
+.bg-img {
+  background-image: url(../images/back-img.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.intro{
+  text-align: center;
+  padding-top: 18em;
+}
+
+.intro h1 {
+  font-size: 3.5em;
+  color: #fff;
+  margin-bottom: .2em;
+}
+
+.intro p {
+  color: #fff;
+  font-size: 1.5em;
+  margin-bottom: 1.8em;
+}
+
+.intro p span {
+  color: var(--clr-main);
+}
+
+.btn-trans {
+  color: #fff;
+  margin-right: .5em;
+}
+
+.btn-trans:hover {
+  background-color: var(--clr-main);
+  color: var(--clr-secondary);
+  border-color: transparent;
+}
+
+.btn-fill {
+  background-color: #fff;
+  border-color: transparent;
+}
+
+.btn-fill:hover {
+  background-color: var(--clr-main);
+}
+/* bg-img --> */
+
+/* company */
+.company {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2em;
+}
+
+.company {
+  padding: 3em 0;
+}
+
+.company img {
+  width: 100%;
+  height: auto;
+  margin-right: 1.2em;
+}
+
+.company-body {
+  margin-top: 1em;
+  line-height: 2em;
+  text-align: justify;
+}
+
+.company-body h1 {
+  font-size: 2em;
+  margin-bottom: .3em;
+}
+
+.company-body p {
+  color: var(--clr-primary);
+}
+/* company --> */
+
+/* Services */
+.services {
+  background-color: var(--clr-main);
+  padding: 2em 0 2em 0;
+}
+
+.services .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 2em;
+}
+
+.container .bucket {
+  text-align: justify;
+}
+
+.service-title {
+  font-size: 1.5em;
+  font-weight: 500;
+  margin-bottom: .2em;
+}
+
+.service-body {
+  line-height: 1.5em;
+  margin-bottom: .3em;
+}
+/* Services --> */
+
+/* Contact */
+.contact {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+.contact h1 {
+  font-size: 2em;
+  margin: 1em 0;
+}
+
+input[type='text'],
+input[type='email'],
+textarea {
+  width: 50%;
+  margin-bottom: .5em;
+  padding: .5em;
+}
+
+input[type='submit'] {
+  background-color: var(--clr-secondary);
+  color: #fff;
+}
+
+input[type='submit']:hover {
+  background-color: var(--clr-main);
+  color: var(--clr-secondary);
+  cursor: pointer;
+}
+
+/* Contact --> */
+
+/* Footer */
+footer {
+  text-align: center;
+  background-color: var(--clr-main);
+  padding: 1em;
+}
+/* Footer --> */
+
+
+@media screen and (max-width: 1300px) {
+  /* company */
+  .display-none {
+    display: none;
+  }
+
+  .company {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .company img {
+    width: 80%;
+  }
+  /* company --> */
+
+  /* services */
+  .services .container{
+    display: block;
+  }
+
+  .services .container .bucket {
+    margin-bottom: 1em;
+  }
+  /* services --> */
+}
